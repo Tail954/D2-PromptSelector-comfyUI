@@ -1,5 +1,25 @@
-﻿__pycache__
+__pycache__
 config/sizeselector_config.yaml
 node_modules
 tags
 yarn.lock
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+
+# OS / Editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build & Env
+dist/
+build/
+.env
+.env.local

@@ -739,6 +739,7 @@ class D2PS_PromptSelector {
     this.targetTextArea.value = beforeText + tag2 + afterText;
     const newPosition = startPos + tag2.length;
     this.targetTextArea.setSelectionRange(newPosition, newPosition);
+    this.targetTextArea.dispatchEvent(new Event("input", { bubbles: true }));
     if (onCtrlKey) {
       this.changeVisible();
     }

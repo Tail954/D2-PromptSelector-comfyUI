@@ -98,6 +98,9 @@ class D2PS_PromptSelector {
         // カーソル位置を追加したテキストの後ろに移動
         const newPosition = startPos + tag2.length;
         this.targetTextArea.setSelectionRange(newPosition, newPosition);
+
+        // ComfyUIに変更を通知
+        this.targetTextArea.dispatchEvent(new Event("input", { bubbles: true }));
         
         // ctrl 押していたら閉じる
         if(onCtrlKey){
